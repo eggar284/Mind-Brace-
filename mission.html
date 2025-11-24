@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission – Mindbrace</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <script type="module" src="./src/animation.js" defer></script>
+</head>
+<body>
+  <div class="background-animation"></div>
+
+  <header class="navbar visible-navbar">
+    <nav>
+      <div class="nav-header">
+        <div class="nav-logo">
+          <img src="/logo.png" alt="Mindbrace Icon" class="nav-icon" />
+          MINDBRACE
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="who.html">Who We Are</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-section fade-in-up">
+    <h1 class="section-title">Our Mission</h1>
+    <p class="lead-text">
+      At Mindbrace, our mission is simple but bold: to proactively protect emotional wellbeing and prevent mental health crises before they escalate. We are building a future where help comes before the breakdown — not after.
+    </p>
+
+    <div class="about-block">
+      <img src="/proactive.png" alt="Proactive Prevention" class="responsive-img" />
+      <div class="about-text">
+        <h2>Proactive, Not Reactive</h2>
+        <p>
+          Most systems wait for people to reach their lowest point before offering support. At Mindbrace, we believe in catching emotional distress at its earliest signs. Through real-time data, intelligent analysis, and intuitive alerts, we create a safety net for your mind.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-block reverse">
+      <img src="/human.png" alt="Human-Centered Tech" class="responsive-img" />
+      <div class="about-text">
+        <h2>Human-Centered Technology</h2>
+        <p>
+          We don’t build for users — we build for humans. That means every feature, every design decision, and every update is created with empathy at its core. We want technology to feel like a friend, not a machine.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-block">
+      <img src="/global.png" alt="Global Impact" class="responsive-img" />
+      <div class="about-text">
+        <h2>A Global Vision</h2>
+        <p>
+          Mental health doesn’t discriminate by country or culture — and neither do we. Our long-term mission is to make emotional wellbeing accessible, affordable, and personalized for people around the world.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Mindbrace. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleButton = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      toggleButton.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+    });
+  </script>
+</body>
+</html>

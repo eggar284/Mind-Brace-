@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Products – Mindbrace</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <script type="module" src="./src/animation.js" defer></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <div class="background-animation"></div>
+
+  <header class="navbar visible-navbar">
+    <nav>
+      <div class="nav-header">
+        <div class="nav-logo">
+          <img src="/logo.png" alt="Mindbrace Icon" class="nav-icon" />
+          MINDBRACE
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="who.html">Who We Are</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-section fade-in-up">
+    <h1 class="section-title">Our Products</h1>
+    <p class="lead-text">
+      We create tools for emotional clarity. Our products are not just gadgets — they’re allies in your mental wellness journey, designed with science, care, and sleek aesthetics.
+    </p>
+
+    <div class="about-block">
+      <img src="/bracelets.JPG" alt="Mindbrace Bracelet" class="responsive-img" />
+      <div class="about-text">
+        <h2>Smart Bracelet – $150</h2>
+        <ul>
+          <li>🧠 Stress levels</li>
+          <li>❤️ Heartbeat patterns</li>
+          <li>📈 Blood pressure</li>
+          <li>🔥 Body temperature</li>
+          <li>💪 Muscular tension</li>
+          <li>🫁 Blood oxygen</li>
+          <li>💓 Heart rate variability</li>
+        </ul>
+        <p>
+          All data is analyzed in real time to detect anxiety spikes and provide calming prompts when you need them most.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-block reverse">
+      <img src="/app_prev.png" alt="Companion App" class="responsive-img" />
+      <div class="about-text">
+        <h2>Free Mental Health Companion</h2>
+        <ul>
+          <li>Daily tips and breathing exercises</li>
+          <li>Real-time feedback based on your bio data</li>
+          <li>Calm-down protocols for panic attacks</li>
+          <li>Emergency resources and hotlines</li>
+        </ul>
+        <p>
+          It's always on — always listening — always ready to support.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-block">
+      <img src="/premiun_app.png" alt="AI Therapy Assistant" class="responsive-img" />
+      <div class="about-text">
+        <h2>Premium Therapeutic AI – $9.99/month</h2>
+        <ul>
+          <li>🧑‍⚕️ A 24/7 AI-trained therapy agent</li>
+          <li>📊 Personalized mental health reports</li>
+          <li>🧭 Guided CBT exercises and journaling</li>
+          <li>🚨 Emergency support and escalation tools</li>
+        </ul>
+        <p>
+          All new users get 1 free month with the purchase of the bracelet.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-block reverse">
+      <div class="responsive-img">
+        <model-viewer src="/dog_collar.glb" alt="3D Model of Bracelet" auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look" style="width: 100%; height: 400px; background: transparent;"></model-viewer>
+      </div>
+      <div class="about-text">
+        <h2>Explore Our Bracelet in 3D</h2>
+        <p>
+          Get to know your device before it even arrives. Use this interactive 3D viewer to explore the bracelet's features, textures, and design from every angle.
+          *(Model coming soon)*
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Mindbrace. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleButton = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      toggleButton.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+    });
+  </script>
+</body>
+</html>

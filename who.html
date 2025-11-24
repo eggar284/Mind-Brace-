@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who We Are – Mindbrace</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <script type="module" src="./src/animation.js" defer></script>
+</head>
+<body>
+  <div class="background-animation"></div>
+
+  <header class="navbar visible-navbar">
+    <nav>
+      <div class="nav-header">
+        <div class="nav-logo">
+          <img src="/logo.png" alt="Mindbrace Icon" class="nav-icon" />
+          MINDBRACE
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="who.html">Who We Are</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-section fade-in-up">
+    <h1 class="section-title">Who We Are</h1>
+    <p class="lead-text">
+      Mindbrace is a company founded by visionary young minds passionate about changing the future of mental health. We believe that technology can become a powerful ally in emotional wellbeing — not only treating but proactively preventing mental health crises.
+    </p>
+
+    <div class="about-block">
+      <img src="/who_we_are.png" alt="Our Team" class="responsive-img" />
+      <div class="about-text">
+        <h2>Our Origins</h2>
+        <p>
+          Born from a group of students, dreamers, and engineers, Mindbrace started as a vision to build a better future — where emotional support is not a luxury, but a standard.
+          Each bracelet we design is a step toward a world where mental health is treated with the urgency, science, and empathy it deserves.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-block reverse">
+      <img src="/driven_by.png" alt="Innovation" class="responsive-img" />
+      <div class="about-text">
+        <h2>Driven by Innovation</h2>
+        <p>
+          We combine neuroscience, biometric sensors, and intelligent algorithms to create an everyday wearable that listens to your body — and cares for your mind.
+          We work closely with psychologists, engineers, and designers to deliver technology that actually makes a difference.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-block">
+      <img src="/empathy.png" alt="Empathy" class="responsive-img" />
+      <div class="about-text">
+        <h2>Empathy is our Core</h2>
+        <p>
+          We believe in real conversations, in listening to pain, and in building tools that genuinely help. Our entire approach is rooted in empathy — for every user, for every life story.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Mindbrace. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ JS para barra responsive en móvil -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleButton = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      toggleButton.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
+
+      // Cerrar menú al hacer click en un link (mejor UX móvil)
+      document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            navLinks.classList.remove("show");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
